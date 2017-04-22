@@ -32,7 +32,7 @@ install.packages(packages)
 setwd("path/to/your/multipleOutputs")
 source("render.R")
 ```
-After folowing this three steps, you may generate the count of files deteminated by length of lists `varx` and `vary` in `param_list` of your predefined `param_list`.
+After folowing this three steps, you may generate the count of files deteminated by length of lists `varx` and `vary` in `param_list`.
 
 #### Setting up parameters.
 
