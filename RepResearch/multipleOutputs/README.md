@@ -22,9 +22,9 @@ install.packages(packages)
 
 #### Edit and run `multipleOutputs`
 
-1. Open the **`render.R`** file in root directory of `multipleOutputs` with your RStudio or any text editor
+1. Open the **`render.R`** file in root directory of `multipleOutputs` with your RStudio or any text editor you prefer.
 
-2. Set up your own parameters to the `param_list`. See the next title to detailed step by step procedure.
+2. Set up your own parameters to the `param_list`. See the next title (Setting up parameters) to detailed step by step procedure.
 
 3. Run the **`render.R`** script by using the R `source()` function
 
