@@ -1,0 +1,76 @@
+---
+output: word_document
+params:
+  title: "Motor Trend Car Road Tests"
+  author: ""
+  date: "2017-04-20"
+  data: ""
+  varx: ""
+  desx: ""
+  vary: ""
+  desy: ""
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(ggplot2)
+library(pander)
+
+# setting dataset
+d <- get(params$data)
+dt <- d[c(params$varx, params$vary)]
+
+# PAnder table configuration
+panderOptions('table.alignment.default', function(df)
+    ifelse(sapply(df, is.numeric), 'right', 'left'))
+panderOptions('table.alignment.rownames', 'left')
+panderOptions('table.emphasize.rownames', F)
+panderOptions('table.style', 'grid')
+panderOptions('big.mark', ",")
+panderOptions('keep.trailing.zeros', TRUE)
+panderOptions('table.continues', '')
+
+```
+
+### `r sprintf('%s', params$title)`
+
+**Autor**: `r sprintf('%s', params$author)`
+
+**Fecha**: `r sprintf('%s', params$date)`
+
+
+<br><br>
+
+#### Description of data
+
+The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).
+
+<br><br>
+
+- **Variables**: The format of the data comes gave as by following structure:
+    - **`r sprintf('%s', params$varx)`**: `r sprintf('%s', params$desx)`
+    - **`r sprintf('%s', params$vary)`**: `r sprintf('%s', params$desy)`
+
+<br><br>
+
+#### Including Tables
+
+You can display nice tables into report. The table bellow is the 10-row header of data, printed using the **`pander`** r package:
+
+<br><br>
+
+```{r table}
+pander(head(dt, 10L))
+```
+
+<br><br>
+
+#### Including Plots
+
+... And you can plot using the great potential that have R to do it.
+
+<br><br>
+
+```{r plot, fig.width=8}
+ggplot(dt, aes_(x = as.name(params$varx), as.name(params$vary))) + geom_point() + theme_bw()
+```
