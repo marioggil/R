@@ -33,7 +33,7 @@ source("render.R")
 ```
 After folowing this three steps, you may generate the count of files deteminated by length of lists `varx` and `vary` in `param_list` of your predefined `param_list`.
 
-### Setting up parameters.
+#### Setting up parameters.
 
 The `param_list` is the way to to pass parameters to `document.Rmd` template. You can find it at top of `render.R` script file in root directory of `multipleOutputs`. Default values for this list are:
 
