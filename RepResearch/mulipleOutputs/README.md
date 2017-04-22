@@ -1,5 +1,6 @@
 ## multipleOutputs documentation
 *By Emanuel Valero*
+
 *2017-04-21*
 
 ---
