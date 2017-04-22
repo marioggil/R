@@ -1,17 +1,37 @@
 ## multipleOutputs documentation
-**By Emanuel Valero**
+*By Emanuel Valero*
+*2017-04-21*
+
+---
 
 ### Description
 
-Project to allow generate multiple output reports by passing parameters (see Markdown Parameter) to a default .Rmd template. Outputs files are saved in `outputs` directory.
+multipleOutputs is a project to allow you generate multiple output reports by passing parameters (see [Markdown Parameter](http://rmarkdown.rstudio.com/lesson-6.html) documentation) to a `.Rmd` template file. Outputs files are saved in `outputs` directory.
 
 ### How to use
 
-1. Open the **`render.R`** file with your RStudio
-2. Set up your own parameters to the param_list.
-3. Run the **`render.R`** script by using the statement `source("render.R")`
+#### Install packages
 
-Folowing this steps you can generate the count of files deteminated by length of lists `varx` and `vary` in `param_list` of your predefined **`render.R`**.
+In order to use `multipleOutputs` you should to install some R packages. Open your R instalation in a terminal or RStudio and run the folowing lines
+
+```R
+packages <- c("ggplot2", "pander", "rmarkkdown", "knitr", "purrr")
+install.packages(packages)
+```
+
+#### Edit and run `multipleOutputs`
+
+1. Open the **`render.R`** file in root directory of `multipleOutputs` with your RStudio or any text editor
+
+2. Set up your own parameters to the `param_list`. See the next title to detailed step by step procedure.
+
+3. Run the **`render.R`** script by using the R `source()` function
+
+```R
+setwd("path/to/your/multipleOutputs")
+source("render.R")
+```
+After folowing this three steps, you may generate the count of files deteminated by length of lists `varx` and `vary` in `param_list` of your predefined `param_list`.
 
 ### Setting up parameters.
 
