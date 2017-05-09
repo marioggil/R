@@ -16,7 +16,7 @@ multipleOutputs is a project to allow you generate multiple output reports by pa
 In order to use `multipleOutputs` you should to install some R packages. Open your R instalation in a terminal or RStudio and run the folowing lines
 
 ```R
-packages <- c("ggplot2", "pander", "rmarkkdown", "knitr", "purrr")
+packages <- c("ggplot2", "pander", "rmarkdown", "knitr", "purrr")
 install.packages(packages)
 ```
 
